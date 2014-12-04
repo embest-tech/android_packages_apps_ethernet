@@ -395,7 +395,7 @@ public class EthernetStateTracker extends Handler {
 
 			case EthernetDataTracker.ETHER_MSG_CONNECTED_FAILED:
 				cR = (connectResult)msg.obj;
-				Log.d("ethapp", "recieved  ETHER_MSG_CONNECTED_SUCCESS");
+				Log.d("ethapp", "recieved  ETHER_MSG_CONNECTED_FAILED");
 				m = getStateMachineByIface(cR.iFace);
 
 				if (m != null)
