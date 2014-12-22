@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.android.ethernet"
 	android:sharedUserId="android.uid.system">
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 	<application android:icon="@drawable/ethernet" android:label="@string/app_name">
 
 		<activity android:name="EthernetSettings" 
@@ -19,7 +20,7 @@
 				 android:label="@string/ethernet_settings_title"
 				 android:process="system">
 			<intent-filter>
-				<action android:name="android.location.MODE_CHANGED"></action>
+				<action android:name="android.intent.action.BOOT_COMPLETED"></action>
 				<category android:name="android.intent.category.HOME"></category>
 			</intent-filter>
 		</receiver>
